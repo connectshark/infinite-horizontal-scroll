@@ -1,0 +1,20 @@
+{
+  "name": "infinite-horizontal-scroll",
+  "version": "0.1.0",
+  "author": {
+    "name": "Chambers",
+    "url": "https://github.com/connectshark"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "devDependencies": {
+    "vite": "^4.4.8"
+  }
+}

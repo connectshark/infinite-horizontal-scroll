@@ -1,0 +1,65 @@
+@import './assets/reset.css';
+:root {
+  --primary: #4B4453;
+  --item: #53596E;
+}
+
+body {
+  font-family: 'Noto Sans TC', 'Poppins', Arial, Helvetica, sans-serif;
+  padding: 5rem 0;
+  background-color: var(--primary);
+  color: white;
+  min-height: 100svh;
+}
+img {
+  vertical-align: middle;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.block {
+  margin: auto;
+  max-width: 300px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.scroller li {
+  padding: 0 .4rem;
+  background-color: var(--item);
+  line-height: 2;
+  border-radius: .2rem;
+  width: max-content;
+  font-weight: bold;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.scroller {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  animation: scroll var(--animation-speed, 20s) infinite linear var(--animation-direction, normal);
+  margin-bottom: 4rem;
+}
+
+.scroller[data-speed="fast"] {
+  --animation-speed: 10s;
+}
+.scroller[data-speed="slow"] {
+  --animation-speed: 30s;
+}
+.scroller[data-direction="reverse"] {
+  --animation-direction: reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - .5rem));
+  }
+}
